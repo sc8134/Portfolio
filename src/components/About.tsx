@@ -84,6 +84,7 @@ export default function About() {
                     width="288"
                     height="288"
                     decoding="async"
+                    sizes="(max-width: 640px) 256px, 288px"
                   />
                 </picture>
               </div>

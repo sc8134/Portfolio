@@ -33,8 +33,8 @@ export default function Footer() {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-sm font-semibold text-white tracking-wide">Sagar RC</p>
-            <p className="text-xs text-[#E8654A]/80 tracking-widest uppercase font-medium mt-0.5">Build. Create. Inspire.</p>
-            <p className="text-xs text-[#7A9AB5] mt-1">© {year} All rights reserved.</p>
+            <p className="text-xs text-[#E8654A] tracking-widest uppercase font-medium mt-0.5">Build. Create. Inspire.</p>
+            <p className="text-xs text-[#A8BDD0] mt-1">© {year} All rights reserved.</p>
           </div>
 
           {/* Social links */}

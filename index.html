@@ -42,16 +42,23 @@
     <meta property="og:profile:first_name" content="Sagar" />
     <meta property="og:profile:last_name" content="RC" />
 
-    <!-- ── Performance: DNS prefetch + preconnect ───────────────────────── -->
+    <!-- ── Fonts: non-blocking load ────────────────────────────────────── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-
-    <!-- ── Fonts with display=swap (prevents render blocking) ───────────── -->
+    <!-- Load fonts without blocking render using media=print trick -->
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap"
+      />
+    </noscript>
 
     <!-- ── Inline critical CSS: prevent flash of unstyled background ────── -->
     <style>
