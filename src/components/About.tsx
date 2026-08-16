@@ -74,12 +74,18 @@ export default function About() {
               {/* Decorative border */}
               <div className="absolute -inset-3 rounded-2xl bg-[#E8654A]/20 blur-xl" aria-hidden="true" />
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl border-2 border-[#E8654A]/30 overflow-hidden shadow-xl">
-                <img
-                  src="/formal.jpg"
-                  alt="Sagar RC — Full Stack Developer"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
+                <picture>
+                  <source srcSet="/formal.webp" type="image/webp" />
+                  <img
+                    src="/formal.jpg"
+                    alt="Sagar RC — Full Stack Developer"
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                    width="288"
+                    height="288"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -right-4 bg-white border border-[#D9CFC5] rounded-xl px-4 py-2 shadow-lg">
