@@ -7,4 +7,19 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          if (id.includes('node_modules/framer-motion') || id.includes('node_modules/motion')) {
+            return 'framer-motion';
+          }
+          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) {
+            return 'react-vendor';
+          }
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600,
+  },
 })
