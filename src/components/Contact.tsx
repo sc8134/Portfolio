@@ -13,14 +13,35 @@ const initialForm: FormState = { name: '', email: '', message: '' };
 
 const TO_EMAIL = 'sc81341@gmail.com';
 
+function isMobile(): boolean {
+  return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+}
+
+function isAndroid(): boolean {
+  return /Android/i.test(navigator.userAgent);
+}
+
+function isIOS(): boolean {
+  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
 function buildMailUrl(form: FormState): string {
   const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
   const body = encodeURIComponent(
     `Hi Sagar,\n\nMy name is ${form.name} and I'm reaching out via your portfolio.\n\n${form.message}\n\nBest regards,\n${form.name}\n${form.email}`
   );
   const to = encodeURIComponent(TO_EMAIL);
-  // Always use Gmail web — works on both mobile and desktop
-  return `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+
+  if (isAndroid()) {
+    // Android — open Gmail app directly via intent
+    return `intent://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}#Intent;scheme=https;package=com.google.android.gm;end`;
+  } else if (isIOS()) {
+    // iOS — Gmail app URL scheme
+    return `googlegmail://co?to=${TO_EMAIL}&subject=${subject}&body=${body}`;
+  } else {
+    // Desktop — Gmail web
+    return `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+  }
 }
 
 export default function Contact() {
@@ -256,7 +277,7 @@ export default function Contact() {
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#E8654A] hover:bg-[#D45538] text-white font-semibold text-sm shadow-lg shadow-[#E8654A]/25 hover:shadow-[#E8654A]/40 transition-all hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <ExternalLink size={15} />
-                  Open in Gmail
+                  {isMobile() ? 'Open Gmail App' : 'Open in Gmail'}
                 </button>
               </form>
             )}

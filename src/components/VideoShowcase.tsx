@@ -28,16 +28,17 @@ export default function VideoShowcase() {
             id="demo-heading"
             className="mt-2 text-3xl sm:text-4xl font-bold text-[#1E3A5F]"
           >
-            See it in{' '}
+            Want to see it{' '}
             <span
               className="text-[#E8654A] italic"
               style={{ fontFamily: '"DM Serif Display", ui-serif, Georgia, serif' }}
             >
-              action
+              in action?
             </span>
           </h2>
           <p className="mt-3 text-[#4A6080] max-w-xl mx-auto text-sm">
-            A 2-minute tour of the portfolio — the design, the projects, and SARA the AI assistant.
+            A 2-minute walkthrough — the design, the projects, and SARA live in action.
+            Or scroll up and try SARA yourself.
           </p>
         </motion.div>
 

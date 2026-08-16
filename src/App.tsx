@@ -3,9 +3,9 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import VideoShowcase from './components/VideoShowcase';
 import Experience from './components/Experience';
 import Terminal from './components/Terminal';
+import VideoShowcase from './components/VideoShowcase';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollProgress from './components/ScrollProgress';
@@ -20,9 +20,9 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
-        <VideoShowcase />
         <Experience />
         <Terminal />
+        <VideoShowcase />
         <Contact />
       </main>
       <Footer />
