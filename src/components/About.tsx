@@ -78,6 +78,7 @@ export default function About() {
                   src="/formal.jpg"
                   alt="Sagar RC — Full Stack Developer"
                   className="w-full h-full object-cover object-top"
+                  loading="lazy"
                 />
               </div>
               {/* Floating badge */}
