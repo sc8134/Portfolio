@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, Mail, Download } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TwitterXIcon } from './SocialIcons';
 import { useEffect, useState } from 'react';
 
@@ -136,6 +136,14 @@ export default function Hero() {
             <Mail size={16} />
             Contact Me
           </button>
+          <a
+            href="/resume.pdf"
+            download="Sagar_RC_Resume.pdf"
+            className="inline-flex items-center gap-2 px-7 py-3 rounded-xl border-2 border-[#E8654A] text-[#E8654A] font-semibold text-sm hover:bg-[#E8654A] hover:text-white transition-all hover:-translate-y-0.5 active:translate-y-0"
+          >
+            <Download size={16} />
+            Resume
+          </a>
         </motion.div>
 
         {/* Social links */}
