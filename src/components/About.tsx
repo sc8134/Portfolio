@@ -97,22 +97,24 @@ export default function About() {
           >
             <div className="space-y-4 text-[#2B4D7A] leading-relaxed">
               <p className="text-lg text-[#1E3A5F]">
-                I'm a Full Stack Developer with 3+ years of experience building
-                web applications across the full stack. I started with frontend work in 2022,
-                expanded into backend development, and now build complete products
-                from pixel-perfect interfaces to resilient API systems.
+                I got into development through Python — not through a bootcamp or a tutorial,
+                but by trying to automate things that annoyed me. That habit of building
+                solutions to real problems is still what drives me.
+              </p>
+              <p>
+                Over the past 3+ years of freelance work alongside my Computer Engineering degree,
+                I've built everything from frontend client sites to full-stack platforms.
+                The project I'm most proud of is{' '}
+                <strong className="text-[#1E3A5F]">Namo Patro</strong> — a Nepali digital calendar
+                I built because nothing decent existed for the BS/AD conversion and local festival
+                data my community actually needed.
               </p>
               <p>
                 My core stack is{' '}
-                <strong className="text-[#1E3A5F]">React, TypeScript, Angular, Next.js, Python, Flask, Node.js</strong>{' '}
-                and{' '}
-                <strong className="text-[#1E3A5F]">PostgreSQL</strong>, though I pick the right tool for the right job.
-                I've shipped products in SaaS, e-commerce, fintech, and AI-always
-                with a focus on clean code, developer experience, and user impact.
-              </p>
-              <p>
-                When I'm not coding, I'm writing about software architecture on my blog,
-                contributing to open source, or exploring mountain trails with my camera.
+                <strong className="text-[#1E3A5F]">React, TypeScript, Python, Flask, Node.js</strong>{' '}
+                and <strong className="text-[#1E3A5F]">PostgreSQL</strong>. I pick tools based on
+                the problem, not habit. Currently studying Computer Engineering at Cosmos College —
+                and building things the whole time.
               </p>
             </div>
 
