@@ -20,9 +20,9 @@ export default function Footer() {
           >
             <img src="/favicon.svg" alt="SR logo" className="w-8 h-8 rounded-lg" />
             <span className="font-mono text-sm tracking-widest text-white">
-              Namaste <span className="text-[#E8654A]">|</span>{' '}
+              Namaste <span className="text-[#FF9B82]">|</span>{' '}
               <span
-                className="text-[#E8654A] italic"
+                className="text-[#FF9B82] italic"
                 style={{ fontFamily: '"DM Serif Display", ui-serif, Georgia, serif' }}
               >
                 From Kathmandu to the World
@@ -33,8 +33,8 @@ export default function Footer() {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-sm font-semibold text-white tracking-wide">Sagar RC</p>
-            <p className="text-xs text-[#E8654A] tracking-widest uppercase font-medium mt-0.5">Build. Create. Inspire.</p>
-            <p className="text-xs text-[#A8BDD0] mt-1">© {year} All rights reserved.</p>
+            <p className="text-xs text-[#FF9B82] tracking-widest uppercase font-medium mt-0.5">Build. Create. Inspire.</p>
+            <p className="text-xs text-[#C8D8E8] mt-1">© {year} All rights reserved.</p>
           </div>
 
           {/* Social links */}

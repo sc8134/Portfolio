@@ -1,0 +1,26 @@
+# Sagar RC — Full Stack Developer Portfolio
+
+> Personal portfolio of Sagar RC, a Full Stack Developer from Kathmandu, Nepal.
+> Built with React, TypeScript, Tailwind CSS, and Framer Motion.
+
+## About
+
+Sagar RC is a Full Stack Developer based in Kathmandu, Nepal. He builds web applications
+using React, TypeScript, Python, Flask, Node.js, and PostgreSQL. He is currently working
+as a Full Stack Developer at CodeRunners Technologies and is open to new opportunities.
+
+## Projects
+
+- [Nova DVR](https://nova-dvr.vercel.app) — AI-powered media hub (TypeScript, React, Python, Flask)
+- [Signal Job Portal](https://github.com/sc8134/signal-job-portal) — Full-stack job board (TypeScript, React, Node.js)
+- [AI Reel Generator](https://github.com/sc8134/ai-reel-generator) — Text-to-video pipeline (Python, OpenAI API)
+- [Velora](https://velora-six-gules.vercel.app) — Media hub (TypeScript, React)
+- [Phishing Simulation Tool](https://github.com/sc8134/phishing-simulation-tool) — Security awareness training (React, Flask)
+- [Namo Patro](https://github.com/sc8134/Namo-Patro) — Nepali digital calendar (TypeScript, React, GPL-3.0)
+
+## Contact
+
+- Email: sc81341@gmail.com
+- GitHub: https://github.com/sc8134
+- LinkedIn: https://www.linkedin.com/in/sagar-rc
+- Portfolio: https://sagarrc.com.np
