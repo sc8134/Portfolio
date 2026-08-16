@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "DM Serif Display", ui-serif, Georgia, serif;
+
+  /* Brand colors */
+  --color-brand-bg: #F5F0EB;
+  --color-brand-coral: #E8654A;
+  --color-brand-coral-dark: #D45538;
+  --color-brand-navy: #1E3A5F;
+  --color-brand-navy-light: #2B4D7A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  body {
+    @apply transition-colors duration-300;
+    background-color: #F5F0EB;
+    color: #1E3A5F;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    color: #1E3A5F;
+  }
+}
+
+/* Utility: coral accent text */
+.text-coral { color: #E8654A; }
+.bg-coral { background-color: #E8654A; }
+.hover\:bg-coral-dark:hover { background-color: #D45538; }
+
+/* Warm cream section backgrounds */
+.bg-cream { background-color: #F5F0EB; }
+.bg-cream-dark { background-color: #EDE6DF; }
+
+/* Navy */
+.text-navy { color: #1E3A5F; }
+.bg-navy { background-color: #1E3A5F; }

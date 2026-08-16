@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <!-- 3D background gradient — deep navy with light source top-left -->
+    <radialGradient id="bgGrad" cx="30%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#2B4D7A"/>
+      <stop offset="60%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#0F2440"/>
+    </radialGradient>
+
+    <!-- Coral snake gradient — warm light to deep -->
+    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8A6A"/>
+      <stop offset="50%" stop-color="#E8654A"/>
+      <stop offset="100%" stop-color="#C04030"/>
+    </linearGradient>
+
+    <!-- Navy snake gradient -->
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A7AB5"/>
+      <stop offset="50%" stop-color="#2B4D7A"/>
+      <stop offset="100%" stop-color="#152D50"/>
+    </linearGradient>
+
+    <!-- 3D letter S gradient — lit from top-left -->
+    <linearGradient id="sGrad" x1="10%" y1="5%" x2="90%" y2="95%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#FFD0C0"/>
+      <stop offset="65%" stop-color="#E8654A"/>
+      <stop offset="100%" stop-color="#A03020"/>
+    </linearGradient>
+
+    <!-- 3D letter R gradient -->
+    <linearGradient id="rGrad" x1="10%" y1="5%" x2="90%" y2="95%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#FFD0C0"/>
+      <stop offset="65%" stop-color="#E8654A"/>
+      <stop offset="100%" stop-color="#A03020"/>
+    </linearGradient>
+
+    <!-- Shine overlay on letters -->
+    <linearGradient id="shine" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Drop shadow filter for snakes -->
+    <filter id="snakeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Deep emboss filter for letters -->
+    <filter id="letterShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="1.5" dy="2" stdDeviation="1" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Outer glow for letters -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square with 3D gradient -->
+  <rect width="64" height="64" rx="13" fill="url(#bgGrad)"/>
+
+  <!-- Subtle inner highlight on background (top edge) -->
+  <rect x="1" y="1" width="62" height="20" rx="12" fill="white" opacity="0.06"/>
+
+  <!-- ─── PYTHON SNAKE BODIES ─── -->
+
+  <!-- Coral snake — curves top-left to center-right (top snake) -->
+  <path d="M32 9 C19 9 12 15 12 24 C12 29 15 32 20 33 L32 33"
+        stroke="url(#coralGrad)" stroke-width="6.5"
+        stroke-linecap="round" fill="none"
+        filter="url(#snakeShadow)"/>
+
+  <!-- Navy snake — curves center-left to bottom-right (bottom snake) -->
+  <path d="M32 33 L44 33 C49 33 52 37 52 42 C52 50 45 56 32 56"
+        stroke="url(#navyGrad)" stroke-width="6.5"
+        stroke-linecap="round" fill="none"
+        filter="url(#snakeShadow)"/>
+
+  <!-- ─── SNAKE HEADS ─── -->
+
+  <!-- Coral snake head (top, facing right) -->
+  <ellipse cx="33" cy="9" rx="5.5" ry="5" fill="url(#coralGrad)" filter="url(#snakeShadow)"/>
+  <!-- Highlight on coral head -->
+  <ellipse cx="31.5" cy="7.5" rx="2.5" ry="1.8" fill="white" opacity="0.35"/>
+  <!-- Eye white -->
+  <circle cx="35" cy="7.8" r="1.8" fill="white"/>
+  <!-- Pupil -->
+  <circle cx="35.4" cy="7.8" r="0.9" fill="#0F2440"/>
+  <!-- Eye shine -->
+  <circle cx="35" cy="7.3" r="0.4" fill="white"/>
+
+  <!-- Navy snake head (bottom, facing left) -->
+  <ellipse cx="31" cy="56" rx="5.5" ry="5" fill="url(#navyGrad)" filter="url(#snakeShadow)"/>
+  <!-- Highlight on navy head -->
+  <ellipse cx="29.5" cy="54.5" rx="2.5" ry="1.8" fill="white" opacity="0.25"/>
+  <!-- Eye white -->
+  <circle cx="29" cy="57.8" r="1.8" fill="white"/>
+  <!-- Pupil -->
+  <circle cx="28.6" cy="57.8" r="0.9" fill="#0F2440"/>
+  <!-- Eye shine -->
+  <circle cx="29" cy="57.3" r="0.4" fill="white"/>
+
+  <!-- ─── "SR" MONOGRAM (3D professional) ─── -->
+
+  <!-- Shadow layer for S (offset bottom-right for 3D depth) -->
+  <text x="17.5" y="41.5"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="18" font-weight="900" font-style="italic"
+        fill="#000000" opacity="0.35">S</text>
+
+  <!-- Shadow layer for R -->
+  <text x="33.5" y="41.5"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="18" font-weight="900" font-style="italic"
+        fill="#000000" opacity="0.35">R</text>
+
+  <!-- Main S letter with gradient -->
+  <text x="16" y="40"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="18" font-weight="900" font-style="italic"
+        fill="url(#sGrad)"
+        filter="url(#letterShadow)">S</text>
+
+  <!-- Main R letter with gradient -->
+  <text x="32" y="40"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="18" font-weight="900" font-style="italic"
+        fill="url(#rGrad)"
+        filter="url(#letterShadow)">R</text>
+
+  <!-- Shine overlay on S -->
+  <text x="16" y="40"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="18" font-weight="900" font-style="italic"
+        fill="url(#shine)">S</text>
+
+  <!-- Shine overlay on R -->
+  <text x="32" y="40"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="18" font-weight="900" font-style="italic"
+        fill="url(#shine)">R</text>
+
+  <!-- Thin coral underline accent under SR -->
+  <rect x="16" y="42" width="30" height="1.5" rx="0.75" fill="#E8654A" opacity="0.8"/>
+
+  <!-- Outer border highlight (top-left rim light for 3D look) -->
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="12.5"
+        stroke="white" stroke-width="0.75" opacity="0.12" fill="none"/>
+</svg>
