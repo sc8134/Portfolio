@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=flat-square)](./LICENSE)
 
 > **"Namaste | From Kathmandu to the World"**  
-> A modern, frontend-only personal portfolio — rated 9.4/10 against other developer portfolios.
+> A modern, frontend-only personal portfolio.
 
 ---
 
