@@ -16,7 +16,7 @@ export const experiences: Experience[] = [
     company: 'Freelance',
     period: 'Jan 2024 – Dec 2024',
     description:
-      'Expanded into backend development — built REST APIs, integrated databases (PostgreSQL, MongoDB), and set up CI/CD pipelines. Shipped backend systems for 8+ client products.',
+      'Expanded into backend development — built REST APIs, integrated databases (PostgreSQL, MongoDB), and set up CI/CD pipelines. Shipped backend systems for multiple client projects.',
     type: 'work',
   },
   {
@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     company: 'Freelance',
     period: 'Jun 2022 – Dec 2023',
     description:
-      'Started freelance career building responsive frontend web applications for clients in e-commerce, healthcare, and fintech. Improved average site performance scores by 35 points.',
+      'Started freelance career building responsive frontend web applications for clients in e-commerce, healthcare, and fintech. Consistently improved Lighthouse performance scores across client projects.',
     type: 'work',
   },
   {

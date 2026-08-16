@@ -119,8 +119,8 @@ export default function About() {
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-4 pt-2">
               {[
-                { value: '10+', label: 'Projects Shipped' },
-                { value: '15+', label: 'Happy Clients' },
+                { value: '6+', label: 'Projects Shipped' },
+                { value: '3+', label: 'Years Building' },
                 { value: '3', label: 'Open Source Libs' },
               ].map(({ value, label }) => (
                 <div key={label} className="text-center p-3 rounded-xl bg-white border border-[#D9CFC5] shadow-sm">
