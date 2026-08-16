@@ -83,8 +83,8 @@ export default function About() {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -right-4 bg-white border border-[#D9CFC5] rounded-xl px-4 py-2 shadow-lg">
-                <p className="text-sm font-bold text-[#1E3A5F]">3+ Years</p>
-                <p className="text-xs text-[#4A6080]">Experience</p>
+                <p className="text-sm font-bold text-[#1E3A5F]">2+ Years</p>
+                <p className="text-xs text-[#4A6080]">Building</p>
               </div>
             </div>
           </motion.div>
@@ -103,8 +103,8 @@ export default function About() {
                 solutions to real problems is still what drives me.
               </p>
               <p>
-                Over the past 3+ years of freelance work alongside my Computer Engineering degree,
-                I've built everything from frontend client sites to full-stack platforms.
+                Over the past 2+ years of building personal projects alongside my Computer
+                Engineering degree, I've grown from frontend work to full-stack development.
                 The project I'm most proud of is{' '}
                 <strong className="text-[#1E3A5F]">Namo Patro</strong> — a Nepali digital calendar
                 I built because nothing decent existed for the BS/AD conversion and local festival
@@ -114,17 +114,17 @@ export default function About() {
                 My core stack is{' '}
                 <strong className="text-[#1E3A5F]">React, TypeScript, Python, Flask, Node.js</strong>{' '}
                 and <strong className="text-[#1E3A5F]">PostgreSQL</strong>. I pick tools based on
-                the problem, not habit. Currently studying Computer Engineering at Cosmos College —
-                and building things the whole time.
+                the problem, not habit. BCE in Computer Engineering from Cosmos College,
+                Pokhara University — courses completed, building the whole time.
               </p>
             </div>
 
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-4 pt-2">
               {[
-                { value: '6+', label: 'Projects Shipped' },
-                { value: '3+', label: 'Years Building' },
-                { value: '3', label: 'Open Source Libs' },
+                { value: '6+', label: 'Projects Built' },
+                { value: '2+', label: 'Years Building' },
+                { value: '3', label: 'Open Source' },
               ].map(({ value, label }) => (
                 <div key={label} className="text-center p-3 rounded-xl bg-white border border-[#D9CFC5] shadow-sm">
                   <p className="text-2xl font-bold text-[#E8654A]">{value}</p>

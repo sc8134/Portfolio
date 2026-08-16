@@ -112,8 +112,8 @@ export default function Hero() {
         >
           I started with Python — writing scripts to automate things that bored me.
           That curiosity grew into building Nova DVR, Signal Job Portal, and Namo Patro —
-          a Nepali calendar app I built because nothing good existed for my community.
-          Now I build full-stack products from Kathmandu that work for real people.
+          a Nepali calendar I built because nothing good existed for my community.
+          All personal projects. All public on GitHub. All built to solve real problems.
         </motion.p>
 
         {/* CTA buttons */}
