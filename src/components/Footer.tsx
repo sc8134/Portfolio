@@ -42,7 +42,7 @@ export default function Footer() {
             {[
               { href: 'https://github.com/sc8134', icon: GithubIcon, label: 'GitHub' },
               { href: 'https://www.linkedin.com/in/sagar-rc', icon: LinkedinIcon, label: 'LinkedIn' },
-              { href: 'https://twitter.com/SagarRC', icon: TwitterXIcon, label: 'Twitter' },
+              { href: 'https://x.com/Sagarch05339168', icon: TwitterXIcon, label: 'Twitter' },
               { href: 'mailto:sc81341@gmail.com', icon: Mail, label: 'Email' },
             ].map(({ href, icon: Icon, label }) => (
               <a

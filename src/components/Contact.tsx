@@ -51,7 +51,7 @@ export default function Contact() {
     { href: 'https://github.com/sc8134', icon: GithubIcon, label: 'GitHub', handle: '@sc8134' },
     { href: 'https://www.linkedin.com/in/sagar-rc', icon: LinkedinIcon, label: 'LinkedIn', handle: 'Sagar RC' },
     { href: 'mailto:sc81341@gmail.com', icon: Mail, label: 'Email', handle: 'sc81341@gmail.com' },
-    { href: 'https://twitter.com/SagarRC', icon: TwitterXIcon, label: 'Twitter / X', handle: '@SagarRC' },
+    { href: 'https://x.com/Sagarch05339168', icon: TwitterXIcon, label: 'Twitter / X', handle: '@Sagarch05339168' },
   ];
 
   return (
