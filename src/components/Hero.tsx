@@ -92,8 +92,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-base sm:text-lg text-[#4A6080] max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          I build fast, scalable, and beautiful web applications from pixel-perfect frontends
-          to resilient backend systems. Turning ideas into production-ready products is what I do.
+          I build fast, scalable, and beautiful web applications from pixel - perfect frontends
+          to resilient backend systems. Turning ideas into production - ready products is what I do.
         </motion.p>
 
         {/* CTA buttons */}

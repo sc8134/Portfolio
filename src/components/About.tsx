@@ -98,8 +98,8 @@ export default function About() {
             <div className="space-y-4 text-[#2B4D7A] leading-relaxed">
               <p className="text-lg text-[#1E3A5F]">
                 I'm a Full Stack Developer with over three years of experience building
-                web applications that scale. I work across the entire stack-from
-                designing pixel-perfect interfaces to architecting backend systems
+                web applications that scale. I work across the entire stack - from
+                designing pixel - perfect interfaces to architecting backend systems
                 that handle millions of requests.
               </p>
               <p>
