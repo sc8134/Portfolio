@@ -1,10 +1,14 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Play } from 'lucide-react';
+
+const VIDEO_ID = 'wgcTCBLrpjo';
+const THUMBNAIL = `https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
 
 export default function VideoShowcase() {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const [activated, setActivated] = useState(false);
 
   return (
     <section
@@ -42,7 +46,7 @@ export default function VideoShowcase() {
           </p>
         </motion.div>
 
-        {/* Video embed */}
+        {/* Video facade / embed */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -51,7 +55,7 @@ export default function VideoShowcase() {
         >
           {/* Ambient glow */}
           <div
-            className="absolute -inset-2 rounded-3xl blur-2xl opacity-20"
+            className="absolute -inset-2 rounded-3xl blur-2xl opacity-20 pointer-events-none"
             style={{ background: 'radial-gradient(ellipse, #E8654A 0%, #1E3A5F 70%)' }}
             aria-hidden="true"
           />
@@ -74,32 +78,67 @@ export default function VideoShowcase() {
                 </div>
               </div>
               <a
-                href="https://youtu.be/wgcTCBLrpjo"
+                href={`https://youtu.be/${VIDEO_ID}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-xs text-[#7A9AB5] hover:text-[#E8654A] transition-colors"
                 aria-label="Watch on YouTube"
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                <span>YouTube</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                YouTube
               </a>
             </div>
 
-            {/* iframe — 16:9 responsive */}
+            {/* 16:9 container */}
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/wgcTCBLrpjo?rel=0&modestbranding=1&color=white"
-                title="Sagar RC — Portfolio Walkthrough | SARA AI + Projects Demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              />
+              {!activated ? (
+                /* Facade — thumbnail + play button, no YouTube JS loaded */
+                <button
+                  onClick={() => setActivated(true)}
+                  className="absolute inset-0 w-full h-full group focus:outline-none focus:ring-2 focus:ring-[#E8654A] focus:ring-offset-2"
+                  aria-label="Play portfolio walkthrough video"
+                >
+                  {/* Thumbnail */}
+                  <img
+                    src={THUMBNAIL}
+                    alt="Portfolio walkthrough thumbnail"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="1280"
+                    height="720"
+                  />
+                  {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-[#1E3A5F]/40 group-hover:bg-[#1E3A5F]/20 transition-colors" />
+                  {/* Play button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-[#E8654A] flex items-center justify-center shadow-2xl shadow-[#E8654A]/40 group-hover:scale-110 transition-transform">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  {/* Duration badge */}
+                  <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs font-mono px-2 py-0.5 rounded">
+                    2:02
+                  </div>
+                </button>
+              ) : (
+                /* Real iframe — only loaded after user clicks */
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1&color=white&autoplay=1`}
+                  title="Sagar RC — Portfolio Walkthrough | SARA AI + Projects Demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              )}
             </div>
           </div>
         </motion.div>
 
-        {/* CTA below video */}
+        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
@@ -107,12 +146,14 @@ export default function VideoShowcase() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
         >
           <a
-            href="https://youtu.be/wgcTCBLrpjo"
+            href={`https://youtu.be/${VIDEO_ID}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border-2 border-[#E8654A] text-[#E8654A] text-sm font-semibold hover:bg-[#E8654A] hover:text-white transition-all hover:-translate-y-0.5"
           >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
             Watch on YouTube
           </a>
           <a
