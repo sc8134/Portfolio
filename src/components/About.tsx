@@ -82,7 +82,7 @@ export default function About() {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -right-4 bg-white border border-[#D9CFC5] rounded-xl px-4 py-2 shadow-lg">
-                <p className="text-sm font-bold text-[#1E3A5F]">2+ Years</p>
+                <p className="text-sm font-bold text-[#1E3A5F]">3+ Years</p>
                 <p className="text-xs text-[#4A6080]">Experience</p>
               </div>
             </div>
@@ -97,10 +97,10 @@ export default function About() {
           >
             <div className="space-y-4 text-[#2B4D7A] leading-relaxed">
               <p className="text-lg text-[#1E3A5F]">
-                I'm a Full Stack Developer with over three years of experience building
-                web applications that scale. I work across the entire stack - from
-                designing pixel - perfect interfaces to architecting backend systems
-                that handle millions of requests.
+                I'm a Full Stack Developer with 3+ years of experience building
+                web applications across the full stack. I started with frontend work in 2022,
+                expanded into backend development, and now build complete products
+                from pixel-perfect interfaces to resilient API systems.
               </p>
               <p>
                 My core stack is{' '}

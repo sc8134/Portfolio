@@ -4,47 +4,47 @@ export const experiences: Experience[] = [
   {
     id: 1,
     role: 'Full Stack Developer',
-    company: 'CodeRunnersTechnologies/Freelance.',
-    period: '2025 – Present',
+    company: 'CodeRunners Technologies / Freelance',
+    period: 'Jan 2025 – Present',
     description:
-      'Led development of a multi-tenant SaaS platform serving 50K+ users. Architected microservices migration, reducing latency by 40% and improving system reliability.',
+      'Building full-stack web applications end-to-end — from React frontends to Node.js and Python backends. Working on SaaS products, API integrations, and AI-powered tools for clients across multiple domains.',
     type: 'work',
   },
   {
     id: 2,
     role: 'Backend Web Developer',
     company: 'Freelance',
-    period: '2023 – 2025',
+    period: 'Jan 2024 – Dec 2024',
     description:
-      'Built and shipped 8+ client backend intregated products from scratch using React, Node.js, and PostgreSQL. Introduced CI/CD pipelines and reduced deployment time from hours to minutes.',
+      'Expanded into backend development — built REST APIs, integrated databases (PostgreSQL, MongoDB), and set up CI/CD pipelines. Shipped backend systems for 8+ client products.',
     type: 'work',
   },
   {
     id: 3,
     role: 'Frontend Web Developer',
     company: 'Freelance',
-    period: '2022 – 2024',
+    period: 'Jun 2022 – Dec 2023',
     description:
-      'Developed responsive frontend web applications for clients across e-commerce, healthcare, and fintech domains. Improved site performance scores by an average of 35 points.',
+      'Started freelance career building responsive frontend web applications for clients in e-commerce, healthcare, and fintech. Improved average site performance scores by 35 points.',
     type: 'work',
   },
   {
     id: 4,
-    role: 'BCE. Computer Engineering',
-    university: 'Pokhara University of Science & Technology',
-    college: 'Cosmos College Of Managemnet & Technology',
-    period: '2021 – 2026',
+    role: 'B.C.E. Computer Engineering',
+    university: 'Pokhara University',
+    college: 'Cosmos College of Management & Technology',
+    period: '2022 – 2026',
     description:
-      'Graduated with honors. Focused on software engineering, algorithms, and distributed systems. Thesis on optimizing distributed caching strategies.',
+      'Studying software engineering, algorithms, data structures, networking, and distributed systems. Actively building real projects alongside coursework throughout the degree.',
     type: 'education',
   },
   {
     id: 5,
-    role: '+2 in Science Physics',
+    role: '+2 in Science (Physics)',
     college: 'Milestone International College',
-    period: '2019 - 2021',
+    period: '2019 – 2021',
     description:
-      'Graduated with honors. achieved 3.78 GPA, nepal 10% top merits list achiever',
+      'Completed higher secondary education with honors. Achieved 3.78 GPA — ranked in the top 10% in Nepal.',
     type: 'education',
-  }
+  },
 ];
