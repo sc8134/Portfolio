@@ -75,7 +75,7 @@ export default function Hero() {
             className="text-[#E8654A] italic"
             style={{ fontFamily: '"DM Serif Display", ui-serif, Georgia, serif' }}
           >
-            Sagar RC
+            Sagar Roka Chhetri
           </span>
         </motion.h1>
 

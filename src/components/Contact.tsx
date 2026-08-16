@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Mail, Send, CheckCircle } from 'lucide-react';
+import { Mail, CheckCircle, ExternalLink } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TwitterXIcon } from './SocialIcons';
 
 interface FormState {
@@ -10,6 +10,18 @@ interface FormState {
 }
 
 const initialForm: FormState = { name: '', email: '', message: '' };
+
+const TO_EMAIL = 'sc81341@gmail.com';
+
+function buildMailUrl(form: FormState): string {
+  const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
+  const body = encodeURIComponent(
+    `Hi Sagar,\n\nMy name is ${form.name} and I'm reaching out via your portfolio.\n\n${form.message}\n\nBest regards,\n${form.name}\n${form.email}`
+  );
+  const to = encodeURIComponent(TO_EMAIL);
+  // Always use Gmail web — works on both mobile and desktop
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+}
 
 export default function Contact() {
   const ref = useRef<HTMLElement>(null);
@@ -43,6 +55,11 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
+
+    // Open Gmail (mobile) or Outlook (desktop) pre-filled with form data
+    const mailUrl = buildMailUrl(form);
+    window.open(mailUrl, '_blank', 'noopener,noreferrer');
+
     setSubmitted(true);
     setForm(initialForm);
   };
@@ -129,9 +146,16 @@ export default function Contact() {
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center p-8 rounded-2xl bg-white border border-[#D9CFC5]">
                 <CheckCircle size={48} className="text-[#E8654A] mb-4" aria-hidden="true" />
-                <h3 className="text-xl font-bold text-[#1E3A5F] mb-2">Message sent!</h3>
-                <p className="text-[#4A6080] text-sm">
-                  Thanks for reaching out. I'll get back to you within 24 hours.
+                <h3 className="text-xl font-bold text-[#1E3A5F] mb-2">Opening your mail app…</h3>
+                <p className="text-[#4A6080] text-sm mb-3">
+                  Your message has been pre-filled in <strong>Gmail</strong>.
+                  Just hit Send!
+                </p>
+                <p className="text-xs text-[#7A9AB5]">
+                  Didn't open?{' '}
+                  <a href={`mailto:${TO_EMAIL}`} className="text-[#E8654A] underline hover:no-underline">
+                    Email directly
+                  </a>
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
@@ -231,8 +255,8 @@ export default function Contact() {
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#E8654A] hover:bg-[#D45538] text-white font-semibold text-sm shadow-lg shadow-[#E8654A]/25 hover:shadow-[#E8654A]/40 transition-all hover:-translate-y-0.5 active:translate-y-0"
                 >
-                  <Send size={15} />
-                  Send Message
+                  <ExternalLink size={15} />
+                  Open in Gmail
                 </button>
               </form>
             )}
