@@ -5,9 +5,9 @@ export const experiences: Experience[] = [
     id: 1,
     role: 'Full Stack Developer',
     company: 'CodeRunners Technologies',
-    period: 'Jul 2026 – Present',
+    period: 'Jul 2025 – Present',
     description:
-      'Building a full-stack cricket fan-page web app using the MERN stack (MongoDB, Express, React, Node.js) — my first professional engagement, with compensation structured as future opportunity rather than salary. Working across the full stack, from React frontend to backend and database design.',
+      'Working on a production-level MERN stack platform (MongoDB, Express, React, Node.js). Built the majority of the React frontend, implemented SMTP-based email integration, and developed an admin control panel for event management. Currently in deployment. Equity-based arrangement.',
     type: 'work',
   },
   {
